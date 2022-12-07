@@ -74,7 +74,7 @@ if form.form_submit_button("Generate Image"):
             right.image(img, width = 300)
             btn = st.download_button(
                     label="Download Image",
-                    data=output,
+                    data=img,
                     file_name="AmazingArt.png",
                     mime="image/jpeg",
                      )
