@@ -66,17 +66,18 @@ if form.form_submit_button("Generate Image"):
         #st.image(Image.open("/Users/ds_janf/code/janmfriedli/PICA-2/PICA-2/api/one.png"))
         output = response.content #NEW
 
-        btn = st.download_button(
-                    label="Download Image",
-                    data=output,
-                    file_name="AmazingArt.png",
-                    mime="image/jpeg",
-                     )
+
         #st.markdown(response.status_code)
         if response.status_code == 200:
             img = np.frombuffer(output , np.uint8)
             img = cv2.imdecode(img , cv2.IMREAD_UNCHANGED)
             right.image(img, width = 300)
+            btn = st.download_button(
+                    label="Download Image",
+                    data=output,
+                    file_name="AmazingArt.png",
+                    mime="image/jpeg",
+                     )
         elif response.status_code == 429:
             st.warning("Hey slow down there!")
         else:
