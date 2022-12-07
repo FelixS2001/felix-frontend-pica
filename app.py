@@ -76,7 +76,6 @@ if form.form_submit_button("Generate Image"):
                     label="Download Image",
                     data=img,
                     file_name="AmazingArt.png",
-                    mime="image/jpeg",
                      )
         elif response.status_code == 429:
             st.warning("Hey slow down there!")
