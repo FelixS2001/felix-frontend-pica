@@ -71,12 +71,6 @@ if form.form_submit_button("Generate Image"):
             img = np.frombuffer(output , np.uint8)
             img = cv2.imdecode(img , cv2.IMREAD_UNCHANGED)
             right.image(img, width = 300)
-            btn = st.download_button(
-                    label="Download Image",
-                    data=right.image(img, width = 300),
-                    file_name="AmazingArt.png",
-                    mime='png/png'
-                    )
 
         elif response.status_code == 429:
             st.warning("Hey slow down there!")
