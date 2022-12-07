@@ -71,6 +71,7 @@ if form.form_submit_button("Generate Image"):
         if response.status_code == 200:
             img = np.frombuffer(output , np.uint8)
             img = cv2.imdecode(img , cv2.IMREAD_UNCHANGED)
+            breakpoint()
             right.image(img, width = 300)
             btn = st.download_button(
                     label="Download Image",
