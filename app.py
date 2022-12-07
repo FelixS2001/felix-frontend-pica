@@ -65,6 +65,7 @@ if form.form_submit_button("Generate Image"):
 
         #st.image(Image.open("/Users/ds_janf/code/janmfriedli/PICA-2/PICA-2/api/one.png"))
         output = response.content #NEW
+        print(type(output))
         btn = st.download_button(
                     label="Download Image",
                     data=output,
