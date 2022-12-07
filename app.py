@@ -70,7 +70,7 @@ if form.form_submit_button("Generate Image"):
                     label="Download Image",
                     data=output,
                     file_name="AmazingArt.png",
-                    mime='bytes/png'
+                    mime='png/png'
                     )
 
         #st.markdown(response.status_code)
